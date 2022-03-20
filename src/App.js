@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Header } from "./components";
+import { Header, Home } from "./components";
 import { Crew, Destination, Technology } from "./pages";
+
+import "./App.scss";
 
 const App = () => {
   return (
@@ -10,7 +12,9 @@ const App = () => {
         <Header />
         <h1>Hello World</h1>
         <Switch>
-          <Route path="/" exact></Route>
+          <Route path="/" exact>
+            <Home />
+          </Route>
           <Route path="/destination" exact>
             <Destination />
           </Route>
