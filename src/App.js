@@ -10,7 +10,6 @@ const App = () => {
     <>
       <Router>
         <Header />
-        <h1>Hello World</h1>
         <Switch>
           <Route path="/" exact>
             <Home />
