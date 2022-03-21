@@ -4,6 +4,9 @@ import logo from "../assets/shared/logo.svg";
 import { CgMenuLeft } from "react-icons/cg";
 
 const Header = () => {
+  const handleClick = () => {
+    const navbar = document.querySelector(".navbar");
+  };
   return (
     <>
       <header className="header flex flex-jc-sb w-full">
@@ -14,7 +17,7 @@ const Header = () => {
         </div>
 
         <nav className="navbar open">
-          <ul>
+          <ul data-visible="false">
             <li>
               <Link to="/">
                 <span className="num">00</span>HOME
@@ -38,7 +41,7 @@ const Header = () => {
           </ul>
         </nav>
         <div className="micon">
-          <button>
+          <button onClick={handleClick}>
             <CgMenuLeft className="text-4xl" />
           </button>
         </div>
