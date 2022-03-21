@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 body {
@@ -39,6 +40,14 @@ p {
   color: #ffffff;
 }
 
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -46,7 +55,92 @@ p {
 
   padding: 24px 24px 0;
 
-  a {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    height: 100px;
+  }
+
+  .navbar {
+    position: fixed;
+    inset: 0 0 0 30%;
+    right: 0;
+    padding: 118px 32px;
+
+    background: rgba(0, 0, 0, 0.945);
+    z-index: 1000;
+
+    @supports (backdrop-filter: blur(81.5485px)) {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(81.5485px);
+    }
+
+    @media screen and (min-width: 768px) {
+      height: 100px;
+      padding: 39px 47px;
+    }
+
+    ul {
+      @media screen and (min-width: 768px) {
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+      li {
+        @media screen and (min-width: 768px) {
+          display: flex;
+          position: relative;
+          margin: 0;
+        }
+        margin: 32px 0;
+        color: #fff;
+
+        a {
+          @media screen and (min-width: 768px) {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 2.362499952316284px;
+            text-align: left;
+          }
+          @media screen and (min-width: 768px) {
+            font-family: Barlow Condensed;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 2.700000047683716px;
+            text-align: left;
+          }
+
+          .num {
+            font-weight: 700;
+            margin-right: 12px;
+            letter-spacing: 2.7px;
+
+            @media screen and (min-width: 768px) {
+              display: none;
+            }
+            @media screen and (min-width: 1024px) {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .micon {
+    z-index: 9999;
+
+    button {
+      color: #d0d6f9;
+      background: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
 }
 
