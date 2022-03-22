@@ -5,7 +5,18 @@ import { CgMenuLeft } from "react-icons/cg";
 
 const Header = () => {
   const handleClick = () => {
+    const close = document.querySelector(".close");
+    const open = document.querySelector(".open");
     const navbar = document.querySelector(".navbar");
+
+    if (navbar.classList.contains("close")) {
+      //   console.log("closed");
+      navbar.classList.add("open");
+      navbar.classList.remove("close");
+    } else {
+      navbar.classList.remove("open");
+      navbar.classList.add("close");
+    }
   };
   return (
     <>
@@ -16,8 +27,8 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav className="navbar open">
-          <ul data-visible="false">
+        <nav className="navbar close">
+          <ul className="" data-visible="false">
             <li>
               <Link to="/">
                 <span className="num">00</span>HOME

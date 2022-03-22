@@ -99,13 +99,6 @@ p {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .header .navbar {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-}
-
 @media screen and (min-width: 768px) {
   .header .navbar {
     top: 20px;
@@ -184,6 +177,20 @@ p {
 @media screen and (min-width: 1024px) {
   .header .navbar ul li a .num {
     display: inline;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header .close {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header .open {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 
