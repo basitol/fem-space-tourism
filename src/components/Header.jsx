@@ -5,12 +5,9 @@ import { CgMenuLeft } from "react-icons/cg";
 
 const Header = () => {
   const handleClick = () => {
-    const close = document.querySelector(".close");
-    const open = document.querySelector(".open");
     const navbar = document.querySelector(".navbar");
 
     if (navbar.classList.contains("close")) {
-      //   console.log("closed");
       navbar.classList.add("open");
       navbar.classList.remove("close");
     } else {
@@ -18,6 +15,7 @@ const Header = () => {
       navbar.classList.add("close");
     }
   };
+
   return (
     <>
       <header className="header flex flex-jc-sb w-full">
